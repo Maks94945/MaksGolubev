@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .cart-items {
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .total-price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .order-form {
+            margin-top: 20px;
+        }
+
+        .order-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .place-order-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .place-order-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Оформление заказа</h1>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="total-price" id="totalPrice">Общая сумма: ₽0</div>
+
+    <div class="order-form">
+        <h3>Ваши данные</h3>
+        <input type="text" id="name" placeholder="Ваше имя" required>
+        <input type="text" id="address" placeholder="Адрес доставки" required>
+        <input type="text" id="phone" placeholder="Телефон" required>
+    </div>
+
+    <button class="place-order-btn" id="placeOrder">Оформить заказ</button>
+</div>
+
+<script>
+    // Получаем данные корзины из localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Функция для отображения товаров в корзине
+    function displayCartItems() {
+        const cartItemsContainer = document.getElementById("cartItems");
+        cartItemsContainer.innerHTML = '';
+
+        let totalPrice = 0;
+        cart.forEach(product => {
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('cart-item');
+            itemDiv.innerHTML = `${product.title} - ₽${product.price}`;
+            cartItemsContainer.appendChild(itemDiv);
+            totalPrice += product.price;
+        });
+
+        document.getElementById("totalPrice").textContent = `Общая сумма: ₽${totalPrice}`;
+    }
+
+    // Отображаем товары в корзине
+    displayCartItems();
+
+    // Обработчик для оформления заказа
+    document.getElementById("placeOrder").addEventListener('click', () => {
+        const name = document.getElementById("name").value;
+        const address = document.getElementById("address").value;
+        const phone = document.getElementById("phone").value;
+
+        if (!name || !address || !phone) {
+            alert("Пожалуйста, заполните все поля!");
+            return;
+        }
+
+        // Информация о заказе
+        const orderDetails = {
+            name,
+            address,
+            phone,
+            cart,
+            totalPrice: cart.reduce((total, product) => total + product.price, 0)
+        };
+
+        // Оформление заказа (можно интегрировать с платёжной системой, например Stripe)
+        alert("Ваш заказ оформлен! Благодарим за покупку.");
+
+        // Очистка корзины
+        localStorage.removeItem('cart');
+        window.location.href = "thankyou.html";  // Перенаправление на страницу благодарности
+    });
+</script>
+
+</body>
+</html>

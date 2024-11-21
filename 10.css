@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #ffffff;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+.navbar {
+  background-color: #000000;
+  padding: 10px 20px;
+}
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+}
+.menu > li {
+  position: relative;
+}
+.menu > li > a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+}
+.menu > li > a:hover {
+  background-color: #555;
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style-type: nrgb(97, 61, 61)
+}
+.sub-menu li a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.sub-menu li a:hover {
+  background-color: #666;
+}
+@media screen and (max-width: 768px) {
+  .menu {
+      flex-direction: column;
+      align-items: center;
+  }
+  .menu > li > a {
+      padding: 15px;
+      width: 100%;
+      text-align: center;
+  }
+  .submenu .sub-menu {
+      position: static;
+      display: none;
+  }
+  .submenu.active .sub-menu {
+      display: block;
+  }
+}
+body.dark-mode {
+    background-color: #ffffff;
+    color: #ecf0f1;
+}
+.cursor {
+    display: none;
+}
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #000000;
+    transition: border-bottom-color 0.5s ease, background-color 0.5s ease;
+}
+body.dark-mode header {
+    border-bottom-color: #ff00ff;
+}
+#themeToggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+}
+
+#themeToggle:hover {
+    transform: rotate(20deg);
+}
+
+body.dark-mode #themeToggle {
+    color: #ecf0f1;
+}
+:root {
+  --white-clr: #fffbf5;
+  --green-clr: #72752e;
+  --green-clr-alt: #8e9056;
+  --orange-clr: #ffa000;
+  --orange-clr-alt: #ffab76;
+  --red-clr: #df3e3d;
+  --choco-clr: #35221e;
+  --card-bd-clr: #ece6dd;
+}
+.choco-bg {
+  background-color: var(--choco-clr);
+}
+.white-clr {
+  color: var(--white-clr);
+}
+.hero-section {
+  position: relative;
+  background-image: url(https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AAWdIZk.img);
+  background-color: var(--choco-clr);
+  min-height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-height: 360px) {
+  .hero-section {
+    min-height: 721px;
+  }
+}
+.upper-footer {
+  background-image: url(https://raw.githubusercontent.com/r-e-d-ant/pizza-store-static-v/e5e8567641f6213899149e68daff741552aad48e/assets/images/footer-img.webp);
+  background-color: var(--choco-clr);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.upper-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+.address h5 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* -- */
+.lower-footer {
+  background-color: #2e2c2a;
+  font-weight: 300;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.copyright {
+  margin-bottom: 0.5rem;
+}
+.developer a {
+  color: var(--green-clr-alt);
+}
+.developer a:hover {
+  color: var(--card-bd-clr);
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0 5rem;
+  }
+}                                  
+.text-overlay {
+    position: absolute; /* Позиционируем текст относительно контейнера */
+    top: 40%; /* Центрируем по вертикали */
+    left: 25%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Точное центрирование */
+    color: rgb(255, 255, 255); /* Цвет текста */
+    font-size: 26px; /* Размер шрифта */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавляем тень для читаемости */
+}    
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Стиль для каждой карточки */
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация увеличения и тени */
+}
+
+/* Стиль изображения внутри карточки */
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Контент внутри карточки */
+.card-content {
+    padding: 15px;
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    opacity: 0; /* Изначально скрыто */
+    transform: translateY(20px); /* Текст сдвинут вниз */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Анимация появления текста */
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.card-content p {
+    font-size: 16px;
+}
+
+/* Анимация при наведении */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Появление текста при наведении */
+.card:hover .card-content {
+    opacity: 1;
+    transform: translateY(0); /* Текст поднимется на своё место */
+}
+.button-3d {
+  background-color: #2c2c2c;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-3d:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .button-3d {
+  background-color: #2b2b2b;
+}
+
+body.dark-mode .button-3d:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+.tt{
+  color: #ffffff;
+  border: none;
+  text-decoration: none;
+}
+.h{
+  margin-left: 950px;
+}
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Стили для формы подписки */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter-input {
+  padding: 10px;
+  margin: 5px 0;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.newsletter-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #0056b3;
+}
+
+/* Стили для нижней части подвала */
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #444;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.social-icon.facebook {
+  background-color: #3b5998;
+}
+
+.social-icon.twitter {
+  background-color: #1da1f2;
+}
+
+.social-icon.instagram {
+  background-color: #e4405f;
+}
+
+/* Анимации */
+.footer-content {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-left {
+      text-align: center;
+  }
+
+  .newsletter-form {
+      width: 100%;
+  }
+
+  .newsletter-input {
+      width: 80%;
+  }
+}
+
+.social-media {
+  margin-top: 15px;
+}
+
+/* Стиль для каждой иконки */
+.social-icon {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.social-icon-img {
+  width: 40px;  /* Размер иконки */
+  height: 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Эффект при наведении на иконку */
+.social-icon-img:hover {
+  transform: scale(1.1); /* Увеличение иконки */
+  opacity: 0.8;  /* Уменьшение прозрачности */
+}
+
+.qq{
+font-size: 20px;
+}

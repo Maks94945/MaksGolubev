@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <style>
+        /* Все стили из предыдущего примера остаются такими же */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        /* ... (другие стили остаются без изменений) */
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="shop.html">Магазин</a></li>
+            <li><a href="checkout.html">Оформление заказа</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Магазин -->
+<section id="store">
+    <div class="store-container">
+        <!-- Товары -->
+        <div class="product-card" data-id="1">
+            <img src="https://via.placeholder.com/250x200" alt="Product 1">
+            <div class="product-info">
+                <div class="product-title">Товар 1</div>
+                <div class="product-price">₽1000</div>
+                <button class="add-to-cart">Добавить в корзину</button>
+            </div>
+        </div>
+        <!-- Добавьте остальные товары сюда -->
+    </div>
+</section>
+
+<div id="cart">Корзина (0)</div>
+
+<script>
+    // Массив товаров
+    const products = [
+        { id: 1, title: "Товар 1", price: 1000 }
+    ];
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Функция для добавления товара в корзину
+    function addToCart(productId) {
+        const product = products.find(p => p.id === productId);
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+    }
+
+    // Обновить количество товаров в корзине
+    function updateCartCount() {
+        const cartCount = cart.length;
+        document.getElementById("cart").textContent = `Корзина (${cartCount})`;
+    }
+
+    // Слушаем клики на кнопки добавления в корзину
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const productId = parseInt(button.closest('.product-card').getAttribute('data-id'));
+            addToCart(productId);
+        });
+    });
+
+    // Обновление состояния корзины при загрузке страницы
+    updateCartCount();
+</script>
+</body>
+</html>

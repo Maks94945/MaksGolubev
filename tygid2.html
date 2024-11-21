@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tygid2.css">
+    <title>Гид</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <ul class="menu">
+              <li><a href="index.html">Главная</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <section class="section hero-section container">
+        <div class="header">
+          <div class="logo"><img src="" alt="" class="image"></div>
+          <div class="text-overlay">Туркестан: мавзолей Ясави и караван-<br>сарай в группе<br>
+            <p1>Обзорная пешеходная экскурсия позволит открыть для<br>себя основные достопримечательности</p1>
+          </div>  
+    </section>
+
+ <div class="tx">
+    <h2>Вас приветствует город с богатейшими историей и культурой – колоритный Туркестан. В компании нашего гида вы исследуете один из древнейших центров Азии, духовную столицу тюркского мира и паломническую святыню.  </h2>
+    <h2>Начнем изучение города с этноаула, погружающего в атмосферу Средних веков. Сделаем акцент на центральной локации города – мавзолее Ходжи Ахмеда Ясави, эта значимая часть музея-заповедника Азрет-Султан украшает список Всемирного наследия ЮНЕСКО. Осмотрим и современную часть Туркестана с комплексом Керуен-сарай: вы будете очарованы "Туркестанской Венецией". Тут вас ожидают улица торговцев и ремесленников, уносящая путешественников в эпоху Великого Шелкового пути, а также бутики знаменитых фирм.</h2>
+    <h2>Любители необычных эмоций оценят "летающий кинотеатр Алтын Самрук" с 8D-эффектами, дарящий шанс отправиться в виртуальный трип над "туристическими магнитами" Республики Казахстан.</h2>
+    <h2>Вечером по желанию гостей можно полюбоваться театрализованным "шоу лодок" (если оно включено в расписание на этот сезон).</h2>
+    <h3>Организационные детали</h3>
+    <ul>
+        <li>Тайминг является приблизительным и может быть изменен в зависимости от пунктуальности группы и возможных непредвиденных обстоятельств.</li>
+        <li>С собой нужно взять: прочные кроссовки; одежду по сезону для прогулки на улице; головной убор по сезону (для женщин головной убор при входе в мечеть обязателен); powerbank (при необходимости); солнцезащитные очки; солнцезащитный крем; личная аптечка, если надо (каждый берет свой минимум лекарств).</li>
+    </ul>
+    <h3>Для бронирования экскурсии вам необходимо оплатить на сайте 25% от стоимости, а остальную сумму гиду на месте. Вы можете задать гиду любые вопросы до оплаты.</p>
+          </div>
+
+    <div class="tour-card">
+        <h3 class="tour-title">Индивидуальная экскурсия<br> на машине гида</h3>
+        <div class="tour-details">
+            <p class="tour-info"><strong>Количество участников:</strong> до 2 человек</p>
+            <p class="tour-info"><strong>Длительность:</strong> 3 часов</p>
+            <p class="tour-info"><strong>Ограничение по возрасту:</strong> 0+</p>
+        </div>
+        <p class="tour-price"><strong>Цена:</strong> 1500 KZT за экскурсию до 2 человек</p>
+    
+        <div class="tour-promotion">
+            <p><strong>Лучшая цена!</strong></p>
+            <p>Мы вернем разницу, если вы найдете цену ниже.</p>
+        </div>
+        <p class="tour-note">При заказе вам не нужно ничего платить. Вы можете задать гиду любые вопросы.</p>
+        <button class="book-btn" id="openModalBtn">Забронировать</button>
+    </div>
+
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Форма бронирования</h2>
+            <form id="bookingForm" class="modal-form">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+    
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона" required>
+    
+                <label for="participants">Количество участников:</label>
+                <input type="number" id="participants" name="participants" placeholder="Введите количество участников" min="1" max="10" required>
+    
+                <label for="comments">Комментарий:</label>
+                <textarea id="comments" name="comments" placeholder="Введите комментарий" rows="4"></textarea>
+    
+                <button type="submit" class="submit-btn">Забронировать</button>
+            </form>
+        </div>
+    </div>
+    
+    
+
+      <footer class="footer">
+        <button id="learnMoreButton" class="button-3d"><a href="tyrkistan.html" target="_blank" class="tt">Вернуться назад</a></button>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2024 Все права защищены</p>
+                <ul class="footer-links">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#onas">О нас</a></li>
+                    <li><a href="#gid">Туристический гид</a></li>
+                </ul>
+            </div>
+            <section id="sc">
+            <div class="social-media">
+              <h1 class="qq">Наши Соц.сети</h1>
+              <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <img src="facebook.png" class="social-icon-img">
+              </a>
+              <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <img src="instagram.png" alt="Instagram" class="social-icon-img">
+              </a>
+              <a href="https://vk.com/guide_go" target="_blank" class="social-icon">
+                <img src="vk.png" alt="VK" class="social-icon-img">
+              </a>
+              <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                <img src="youtube.png" alt="YouTube" class="social-icon-img">
+              </a>
+            </div>
+          </div>      
+</footer>
+
+<script>
+     // Получаем элементы
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const bookingModal = document.getElementById("bookingModal");
+const bookingForm = document.getElementById("bookingForm");
+
+// Открытие модального окна
+openModalBtn.onclick = function() {
+    bookingModal.style.display = "block";
+}
+
+// Закрытие модального окна
+closeModalBtn.onclick = function() {
+    bookingModal.style.display = "none";
+}
+
+// Закрытие модального окна при клике за пределами модального окна
+window.onclick = function(event) {
+    if (event.target == bookingModal) {
+        bookingModal.style.display = "none";
+    }
+}
+
+// Обработка отправки формы
+bookingForm.onsubmit = function(event) {
+    event.preventDefault(); // Предотвращаем отправку формы
+
+    const formData = new FormData(bookingForm);
+    const data = {
+        name: formData.get("name"),
+        phone: formData.get("phone"),
+        participants: formData.get("participants"),
+        comments: formData.get("comments")
+    };
+
+    console.log("Забронировано:", data);
+
+    // Показываем сообщение об успешной отправке
+    alert("Спасибо за бронирование!");
+
+    // Закрываем модальное окно
+    bookingModal.style.display = "none";
+}
+
+</script>
+
+</body>
+</html>

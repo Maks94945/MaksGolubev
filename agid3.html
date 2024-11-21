@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agid3.css">
+    <title>Гид</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <ul class="menu">
+              <li><a href="index.html">Главная</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <section class="section hero-section container">
+        <div class="header">
+          <div class="logo"><img src="" alt="" class="image"></div>
+          <div class="text-overlay">Пеший гастротур “Вкусы Алма-Аты”<br>
+            <p1>Отправиться на легендарный Зеленый базар,<br>расположенный на знаменитом Шелковом пути</p1>
+          </div>  
+    </section>
+
+ <div class="tx">
+    <h2>Республика Казахстан — государство полиэтническое, чей уникальный облик формируют обычаи, исконный уклад и традиции многих народов. Самое яркое подтверждение этому можно найти на… городском рынке! </h2>
+    <h2>Мы туда непременно заглянем, но сначала уделим внимание признанным “жемчужинам” Алма-Аты: </h2>
+    <ul>
+        <li>неспешно пройдемся по парку имени 28 гвардейцев-панфиловцев</li>
+        <li>полюбуемся роскошной архитектурой Вознесенского кафедрального собора — его золотые купола и изящный декор неизменно впечатляют гостей</li>
+        <li>посетим Мемориал Славы и иные монументы, символизирующие разные эпохи из прошлого страны. </li>
+    </ul>
+    <h2>После отправимся на Зеленый базар в компании гида, из рассказа которого вы узнаете об истории казахского города, также он по-дружески подскажет, что стоит попробовать из богатого кулинарного наследия кочевников. На Зеленом базаре вас ждет насыщенное гастроприключение: </h2>
+    <ul>
+        <li>дегустация блюд национальной кухни; </li>
+        <li>отведаете традиционный кумыс и верблюжье молоко;</li>
+        <li>сможете приобрести локальные сухофрукты, гранатовый или апельсиновый фреши; </li>
+        <li>выберите оригинальные сувениры “со вкусом” для родных и близких;</li>
+        <li>устроите колоритный фотосет; </li>
+        <li>оцените достоинства 8 видов вин местного производства, награжденных на международных конкурсах. </li>
+        <h2>Наш гид с удовольствием подскажет вам самые интересные локации Алма-Аты для самостоятельного посещения.   </h2>
+    </ul>
+    <h3>Организационные детали</h3>
+    <h3>Входят в стоимость: </h3>
+    <ul>
+        <li>экскурсия с профессиональным гидом</li>
+        <li>обед, чаепитие, дегустация молочных и мясных продуктов</li>
+        <li>презентация и дегустация местных вин от сомелье в уютном кафе</li>
+    </ul>
+    <h3>Для бронирования экскурсии вам необходимо оплатить на сайте 25% от стоимости, а остальную сумму гиду на месте. Вы можете задать гиду любые вопросы до оплаты.</p>
+          </div>
+
+    <div class="tour-card">
+        <h3 class="tour-title">Индивидуальная экскурсия<br> на машине гида</h3>
+        <div class="tour-details">
+            <p class="tour-info"><strong>Количество участников:</strong> до 2 человек</p>
+            <p class="tour-info"><strong>Длительность:</strong> 3 часов</p>
+            <p class="tour-info"><strong>Ограничение по возрасту:</strong> 0+</p>
+        </div>
+        <p class="tour-price"><strong>Цена:</strong> 1500 KZT за экскурсию до 2 человек</p>
+    
+        <div class="tour-promotion">
+            <p><strong>Лучшая цена!</strong></p>
+            <p>Мы вернем разницу, если вы найдете цену ниже.</p>
+        </div>
+        <p class="tour-note">При заказе вам не нужно ничего платить. Вы можете задать гиду любые вопросы.</p>
+        <button class="book-btn" id="openModalBtn">Забронировать</button>
+    </div>
+
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Форма бронирования</h2>
+            <form id="bookingForm" class="modal-form">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+    
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона" required>
+    
+                <label for="participants">Количество участников:</label>
+                <input type="number" id="participants" name="participants" placeholder="Введите количество участников" min="1" max="10" required>
+    
+                <label for="comments">Комментарий:</label>
+                <textarea id="comments" name="comments" placeholder="Введите комментарий" rows="4"></textarea>
+    
+                <button type="submit" class="submit-btn">Забронировать</button>
+            </form>
+        </div>
+    </div>
+    
+    
+
+      <footer class="footer">
+        <button id="learnMoreButton" class="button-3d"><a href="almaty.html" target="_blank" class="tt">Вернуться назад</a></button>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2024 Все права защищены</p>
+                <ul class="footer-links">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#onas">О нас</a></li>
+                    <li><a href="#gid">Туристический гид</a></li>
+                </ul>
+            </div>
+            <section id="sc">
+            <div class="social-media">
+              <h1 class="qq">Наши Соц.сети</h1>
+              <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <img src="facebook.png" class="social-icon-img">
+              </a>
+              <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <img src="instagram.png" alt="Instagram" class="social-icon-img">
+              </a>
+              <a href="https://vk.com/guide_go" target="_blank" class="social-icon">
+                <img src="vk.png" alt="VK" class="social-icon-img">
+              </a>
+              <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                <img src="youtube.png" alt="YouTube" class="social-icon-img">
+              </a>
+            </div>
+          </div>      
+</footer>
+
+<script>
+     // Получаем элементы
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const bookingModal = document.getElementById("bookingModal");
+const bookingForm = document.getElementById("bookingForm");
+
+// Открытие модального окна
+openModalBtn.onclick = function() {
+    bookingModal.style.display = "block";
+}
+
+// Закрытие модального окна
+closeModalBtn.onclick = function() {
+    bookingModal.style.display = "none";
+}
+
+// Закрытие модального окна при клике за пределами модального окна
+window.onclick = function(event) {
+    if (event.target == bookingModal) {
+        bookingModal.style.display = "none";
+    }
+}
+
+// Обработка отправки формы
+bookingForm.onsubmit = function(event) {
+    event.preventDefault(); // Предотвращаем отправку формы
+
+    const formData = new FormData(bookingForm);
+    const data = {
+        name: formData.get("name"),
+        phone: formData.get("phone"),
+        participants: formData.get("participants"),
+        comments: formData.get("comments")
+    };
+
+    console.log("Забронировано:", data);
+
+    // Показываем сообщение об успешной отправке
+    alert("Спасибо за бронирование!");
+
+    // Закрываем модальное окно
+    bookingModal.style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
